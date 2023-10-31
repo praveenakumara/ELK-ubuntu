@@ -92,3 +92,9 @@ sudo systemctl enable filebeat
 
 
 curl -XGET 'http://localhost:9200/filebeat-*/_search?pretty'
+##############################################################################################################
+
+### suppose you have check the nginx log so for that set filebeat for nginx use below command
+filebeat modules enable nginx ---> enable nginx log to the kibana 
+filebeat setup -e  ---> setup filebeat from the terminal
+
