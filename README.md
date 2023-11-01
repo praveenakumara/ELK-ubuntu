@@ -128,3 +128,12 @@ sudo systemctl restart kibana
 # 9:Accessing Kibana
 
 http://ip_address:5601
+
+
+# to access the docker metric 
+sudo apt install metricbeat
+nano vi /etc/metricbeat/metricbeat/yml ----> enable metrics
+restart metricbeat
+
+
+https://www.youtube.com/watch?v=2HYYh6QEcnM ----> refer thsi video to visualize docker 
