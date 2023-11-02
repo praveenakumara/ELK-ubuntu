@@ -51,7 +51,8 @@ sudo nano /etc/elasticsearch/elasticsearch.yml
 
 # Go to Network section and uncomment (network.host:0.0.0.0) and replace your system IP with
 
-# network.host: 0.0.0.0 And you need to add this line discovery.seed_hosts: [ ] in discovery section 
+network.host: 0.0.0.0
+discovery.seed_hosts: [  ] in discovery section 
 
 # second step is go to the BEGIN SECURITY AUTO CONFIGURATION and here you need to replace this true with false as shown in below:
 
@@ -115,10 +116,10 @@ sudo systemctl status kibana
 open the kibana.yml configuration file for editing:
 
 sudo nano /etc/kibana/kibana.yml
-Uncomment this below lines and localhost replace with 0.0.0.0 (means any ip_address):
+Uncomment this below lines and localhost replace
 
 server.port: 5601
-server.host: "localhost"
+server.host: "0.0.0.0"
 elasticsearch.hosts: ["http://localhost:9200"]
 
 # After changing configuration file you need to restart kibana
